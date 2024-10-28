@@ -1,0 +1,23 @@
+name: Packaging
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  package:
+    uses: nlnetlabs/ploutos/.github/workflows/pkg-rust.yml@v7
+    with:
+      package_build_rules: |
+        image:
+          - "ubuntu:xenial"
+          - "ubuntu:bionic"
+          - "ubuntu:focal"
+          - "ubuntu:jammy"
+          - "debian:stretch"
+          - "debian:buster"
+          - "debian:bullseye"
+          - "debian:bookworm"
+        target: x86_64
+        extra_cargo_deb_args: --output target/debian
+      package_test_scripts_path: pkg/test-scripts/test.sh

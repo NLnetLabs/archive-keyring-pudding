@@ -1,0 +1,24 @@
+[package]
+name = "keyring-pudding"
+version = "0.1.0"
+edition = "2021"
+authors = ["NLnet Labs <pkg@nlnetlabs.nl>"]
+description = "A proof for the correctness of the NLnet Labs package repository signing key for Debian(-derivatives) package."
+repository = "https://github.com/NLnetLabs/archive-keyring-pudding/"
+license = "BSD-3-Clause"
+exclude = [ ".github" ]
+
+[dependencies]
+
+[package.metadata.deb]
+extended-description = """\
+This package exists to test our ability to ship and keyroll our package signing \
+key package nlnetlabs-archive-keyring to supply an updated copy of the key(s) \
+that are used to authenticate the packages we supply on our (third party) \
+package repository."""
+depends = ""
+section = "misc"
+priority = "optional"
+assets = [
+    ["target/release/nlnetlabs-archive-pudding", "usr/bin/", "755"],
+]
