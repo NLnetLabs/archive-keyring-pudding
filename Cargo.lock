@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "keyring-pudding"
+name = "nlnetlabs-archive-keyring-pudding"
 version = "0.1.0"

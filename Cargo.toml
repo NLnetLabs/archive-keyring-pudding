@@ -1,5 +1,5 @@
 [package]
-name = "keyring-pudding"
+name = "nlnetlabs-archive-keyring-pudding"
 version = "0.1.0"
 edition = "2021"
 authors = ["NLnet Labs <pkg@nlnetlabs.nl>"]
@@ -20,5 +20,5 @@ depends = ""
 section = "misc"
 priority = "optional"
 assets = [
-    ["target/release/nlnetlabs-archive-pudding", "usr/bin/", "755"],
+    ["target/release/nlnetlabs-archive-keyring-pudding", "usr/bin/", "755"],
 ]
